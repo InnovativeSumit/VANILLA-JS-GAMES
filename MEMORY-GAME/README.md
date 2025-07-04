@@ -6,20 +6,6 @@ Welcome to my **Memory Game** – a fun, responsive, and easy-to-play browser ga
 
 Test your memory by matching pairs of cards! This lightweight game is designed with clean visuals, smooth animations, and is fully responsive so you can play it on both desktop and mobile devices.
 
-## 📸 Screenshots
-
-Here's a preview of the  page:
-
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/7cc06045-cedc-402d-8589-17da8d0d672e" alt="Sidebar Screenshot 2" width="450" height="550" /></td>
-  </tr>
-</table>
-
-## 🚀 Live Demo
-
-🔗 Try it Live :- [MEMORY-GAME](https://innovativesumit.github.io/MEMORY-GAME/)
-
 ## 🚀 Features
 
 - ✅ Simple & addictive gameplay
