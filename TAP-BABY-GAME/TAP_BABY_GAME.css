@@ -1,0 +1,65 @@
+          body {
+            background-image: url('https://plus.unsplash.com/premium_photo-1672053732675-3e008b635afa?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: white; /* Make text white for better visibility */
+        }
+
+        h1 {
+            color: #333; /* Heading color */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+
+        #game-container {
+            position: relative;
+            width: 400px; 
+            height: 400px; 
+            border: 2px solid #333; 
+            margin: 5px;
+            overflow: hidden;
+            background-color: #fff; /* White background for the game area */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+        }
+
+        .circle {
+            position: absolute; 
+            width: 50px; 
+            height: 50px; 
+            background-color: red; 
+            border-radius: 50%; 
+            cursor: pointer; 
+            transition: background-color 0.3s; /* Smooth color transition */
+        }
+
+        .circle:hover {
+            background-color: #ff4500; /* Darker shade on hover */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff; /* Button color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker button on hover */
+        }
+
+        #score {
+            font-size: 24px;
+            color: #333; /* Score color */
+        }
+    
