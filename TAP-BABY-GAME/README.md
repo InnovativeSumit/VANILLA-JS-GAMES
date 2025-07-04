@@ -2,9 +2,6 @@
 
 A **fun and addictive tapping game** built with **HTML, CSS, and JavaScript**. Test your reflexes as you tap the baby to make it laugh and score points before time runs out!
 
-## 🎮 Live Demo
-
-🔗 Play now: [Tap-Baby Game](https://innovativesumit.github.io/TAP-BABY-GAME/)
 
 ## ✨ Features
 
@@ -26,14 +23,6 @@ A **fun and addictive tapping game** built with **HTML, CSS, and JavaScript**. T
 - **Local Storage**: Saves high scores between sessions
 - **Touch & Mouse Support**: Works on all devices
 
-## 📸 Screenshots
-
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/7b99535b-b066-4e48-ba12-c5ce9054ca39" alt="Game Start Screen" width="400" /></td>
-    <td><img src="https://github.com/user-attachments/assets/6658c501-43d4-42ac-9b62-91cd8ba17b80" alt="Gameplay Example" width="350" /></td>
-  </tr>
-</table>
 
 ## 📜 License
 
