@@ -1,0 +1,55 @@
+
+        body {
+            background-image: url('https://plus.unsplash.com/premium_photo-1672053732675-3e008b635afa?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: white; /* Make text white for better visibility */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+
+        #gameBoard {
+            display: grid;
+            grid-template-columns: repeat(4, 80px); /* 4 cards in a row */
+            gap: 20px; /* Space between cards */
+            margin-bottom: 20px;
+        }
+
+        .card {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(200, 200, 200, 0.8); /* Slightly transparent */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    
