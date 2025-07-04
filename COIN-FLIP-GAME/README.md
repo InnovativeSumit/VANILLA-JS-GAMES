@@ -2,17 +2,6 @@
 
 Welcome to my simple yet entertaining **Coin Flip Game** – a fun web-based project built using **HTML**, **CSS**, and **JavaScript**. This game allows users to flip a virtual coin and randomly get either **Heads** or **Tails**, complete with smooth animations and a clean interface.
 
-## 🚀 Live Demo
-
-🔗  Try it live now:- [COIN-FLIP-GAME](https://innovativesumit.github.io/COIN-FLIP-GAME/)
-
-## 📸 Screenshots
-
-Here's a preview of the site:
-
-<p align="center">  <img src="https://github.com/user-attachments/assets/c9cd01e5-f4ce-4cae-8644-86d961e962e6" alt="Screenshot 1" width="520" height="650" /> </p>
-<p align="center">  <img src="https://github.com/user-attachments/assets/aa55c5de-f7fe-49a9-9723-ca6875ffcbe4" alt="Screenshot 2" width="520" height="820" /> </p>
-
 ## 🎮 Features
 
 - 🔁 Flip a coin with a single click
