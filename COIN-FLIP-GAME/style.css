@@ -1,0 +1,288 @@
+body {
+    background: linear-gradient(135deg, #6366f1, #3b82f6, #2dd4bf);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+.coin-container {
+    perspective: 1000px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.coin {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in;
+}
+
+.coin-heads, .coin-tails {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.coin-heads {
+    background: linear-gradient(45deg, #f5d05c, #e6be4d, #f5d05c);
+    z-index: 2;
+}
+
+.coin-tails {
+    background: linear-gradient(45deg, #e6be4d, #f5d05c, #e6be4d);
+    transform: rotateY(180deg);
+}
+
+.coin-inner {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 20%, transparent 60%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #d4af37;
+}
+
+.heads-design {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: #8B6914;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.tails-design {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: #8B6914;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.flip-btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.flip-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+.flip-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.flip-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.result-text {
+    animation: fadeIn 1s ease-in;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.coin-flip-heads {
+    animation: flip-heads 3s forwards;
+}
+
+.coin-flip-tails {
+    animation: flip-tails 3s forwards;
+}
+
+@keyframes flip-heads {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(1800deg);
+    }
+}
+
+@keyframes flip-tails {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(1980deg);
+    }
+}
+
+.stats {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.stats.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.counter {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.counter:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.container {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.prediction-btn {
+    transition: all 0.3s ease;
+    transform: scale(0.95);
+    position: relative;
+    overflow: hidden;
+}
+
+.prediction-btn:hover {
+    transform: scale(1);
+}
+
+.prediction-btn.active {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.prediction-btn.active::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+.prediction-result {
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    animation: bounceIn 0.5s;
+}
+
+.prediction-correct {
+    background-color: rgba(16, 185, 129, 0.8);
+    color: white;
+}
+
+.prediction-incorrect {
+    background-color: rgba(239, 68, 68, 0.8);
+    color: white;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Added circle around letters */
+.letter-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(139, 105, 20, 0.1);
+    border: 3px solid #8B6914;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
