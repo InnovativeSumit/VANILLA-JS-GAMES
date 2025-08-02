@@ -29,19 +29,6 @@ A **fun and addictive tapping game** built with **HTML, CSS, and JavaScript**. T
 - 💾 **Local Storage** – Keeps your high score saved  
 - 👆 **Touch & Mouse Support** – Optimized for all devices  
 
-
-
-## 📸 Screenshots
-
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/490b31fa-d398-4db1-8ee3-47e4aa3300e0" alt="Game Start Screen" width="400" /></td>
-   
-  </tr>
-</table>
-
-
-
 ## 🛠️ How to Use
 
 1. Clone or download the repository  
@@ -72,6 +59,7 @@ I'm passionate about collaborating on innovative projects and sharing knowledge 
 
 <p>For questions or support, please open an issue on the repository.</p>
 </div>
+
 
 
 
