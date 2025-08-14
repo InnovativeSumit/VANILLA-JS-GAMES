@@ -15,14 +15,6 @@ Try to guess the secret number within the given range and limited attempts — w
 ✅ **Pure HTML, CSS, and JavaScript** — no frameworks  
 
 
-
-## 🖼 Preview
-
-![Number Guessing Game Screenshot](screenshot.png)  
-*A clean and modern interface for guessing fun*
-
-
-
 ## 🛠 Technologies Used
 
 - **HTML5** – Game layout and structure  
