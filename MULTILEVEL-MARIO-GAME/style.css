@@ -1,0 +1,201 @@
+body {
+  background-image: url('https://orig00.deviantart.net/4974/f/2010/327/f/2/smw_animated_cave_background_by_ribozurai-d33giex.gif');
+	background-size: cover;
+	background-position: center;
+	z-index: -999;
+}
+
+h2 {
+  color: #666;
+  font-family: monospace;
+  text-align: center;
+}
+
+.background {
+  table-layout: fixed;
+  border-spacing: 0;
+}
+
+.background td {
+  padding: 0;
+}
+
+.lava,
+.actor {
+  background: red;
+}
+
+.wall {
+  background: gray;
+  border: solid 3px black;
+  box-sizing: content-box;
+}
+
+.actor {
+  position: absolute;
+}
+
+.coin {
+  background: #d4af37;
+  border-radius: 70%;
+}
+
+.player {
+  background: url(https://vignette4.wikia.nocookie.net/fantendo/images/6/6e/Small-mario.png/revision/latest?cb=20120718024112);
+  background-size: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: none;
+}
+
+.lost .player {
+  background: blah;
+}
+
+.won .player {
+  background: green;
+}
+
+.game {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.overlay.show {
+  visibility: visible;
+}
+
+.btn {
+  border: none;
+  height: 40px;
+  color: #fff;
+  width: 120px;
+  background: deepskyblue;
+  text-transform: uppercase;
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-stop {
+  display: none;
+}
+
+.popup {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  max-width: 500px;
+  background: #4776E6;
+  background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+  background: linear-gradient(to right, #8E54E9, #4776E6);
+  color: #fff;
+  padding: 50px;
+  width: 100%;
+  height: 140px;
+  border-radius: 2px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+}
+
+.show>.popup {
+  top: 300px;
+  opacity: 1;
+}
+
+.popup h4 {
+  text-align: left;
+  background: red;
+  padding: 6px 10px;
+  color: red;
+}
+
+.pop-header {
+  position: absolute;
+  top: -160px;
+  text-align: center;
+  width: 100%;
+  height: 230px;
+  left: 0;
+  z-index: 5;
+  background: url("https://vignette2.wikia.nocookie.net/fantendo/images/1/17/MarioPunch.png/revision/latest?cb=20110731135256") no-repeat;
+  background-position: center 0;
+}
+
+.pop-header .close {
+	top: 160px;
+  position: absolute;
+  color: #fff;
+  right: 0;
+  bottom: 55px;
+  font-size: 22px;
+  cursor: pointer;
+  width: 30px;
+  text-align: center;
+}
+
+.pop-body {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.time,
+.time::after {
+  display: block;
+  position: absolute;
+  background: #ffd54f;
+  left: 0;
+  right: 0;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  line-height: 47px;
+  font-size: 22px;
+  margin: auto;
+  bottom: -5px;
+  box-shadow: 0 0 0 10px #FFD54F;
+  text-align: center;
+}
+
+.time::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  background: none;
+  border-top-color: red;
+}
+
+.time.start::after {
+  -webkit-animation: rotate 1s linear infinite;
+  animation: rotate 1s linear infinite;
+}
+
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}

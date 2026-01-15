@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Super Mario Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- Game-->
+<div class="overlay show">
+  <div class="popup text-center">
+    <div class="pop-header"><a class="close pop-close">x</a></div>
+    <h3>Get All Gold Coins To Pass Levels<br>Use Arrow Keys To Move</h3>
+		<h3>Keep Out Of The Lava To Survive But Some<br>🔥Are A Troll And Do Not Kill You Lol🔥</h3>
+    <button class="btn mtl pop-close btn-start">Start</button>
+  </div>
+</div>
+<!-- Game Over-->
+<div id="gameOver" class="overlay">
+  <div class="popup">
+    <div class="pop-header"><a class="close pop-close">x</a></div>
+    <h4>Top Score<span class="pull-right myTopScore">0</span></h4>
+    <h4>Score<span class="pull-right hits">0</span></h4>
+    <div class="text-center">
+      <button class="btn pop-close btn-start">Restart</button>
+    </div>
+  </div>
+	
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
