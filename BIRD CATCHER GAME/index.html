@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bird Catcher Game</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="frame">
+	<svg id="game" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="450" height="680" fill="none" viewBox="0 0 450 680">
+
+		<radialGradient id="radialGradient" cx="50%" cy="50%" r="50%">
+  <stop offset="0%" stop-color="#cfecf7"/>
+  <stop offset="100%" stop-color="#a0d9ef"/>
+</radialGradient>
+
+		<path fill="url(#radialGradient)" d="M0 1h450v680H0z"/>
+		<path fill="#004aad" d="M0 0h450v80H0z"/>
+		<path fill="#004aad" d="M0 631h450v50H0z"/>
+		<path fill="#004aad" d="M0 74h450v6H0z"/>
+		<rect width="430" height="54" x="10" y="10" fill="#cfecf7" rx="12"/>
+		<path xmlns="http://www.w3.org/2000/svg" fill="#004aad" d="M391.652 25.303c3.524-3.523 9.148-3.665 12.842-.427l.017-.016.352-.334a9.407 9.407 0 0 1 13.285 13.286l-.333.352-13.303 13.303-13.304-13.304.016-.017c-3.238-3.695-3.097-9.318.428-12.843Z"/>
+		<g fill="#004aad" font="inherit" >
+			<text id="score" x="25" y="46" >00000000</text>
+			<text id="lives" x="345" y="46" font="inherit" ></text>
+		</g>
+
+		<path fill="#FEECBF" d="M104.139 183.699c1.5-19.5-32-23-32-1.5-15.5-5.5-20.5 13.5-12.5 16 14.5 0 43.5.5 55 .5 10.5-4-.5-22-10.5-15Zm295.5-2c1.642-21.263-33-24.5-34.5-3.5-18.5-6-24.258 16.956-15.5 19.682h60.837c11.495-4.362.111-23.815-10.837-16.182ZM93.078 379.908c1.792-23.22-34.939-29.209-41.439-2.209-16.5-8-22.677 16.903-13.12 19.88h66.384c12.543-4.763.121-26.007-11.825-17.671Zm192.561-69.209c1.295-16-22.804-22.105-27.5-3.5-11.919-5.513-18.639 12.448-11.736 14.5h47.954c9.061-3.282-.089-16.744-8.718-11Zm16 232.5c1.307-16.633-24.76-21.841-29.5-2.5-12.033-5.731-18.163 12.839-11.194 14.971h48.413c10.281-3.471.993-18.442-7.719-12.471Z"/>
+
+		<g font-size="36" id="game-over-screen" pointer-events="none" visibility="hidden" >
+			<text x="225" y="220" text-anchor="middle" stroke="#603719" stroke-width="10">GAME OVER</text>
+			<text x="225" y="220" text-anchor="middle" fill="#f16f33">GAME OVER</text>
+			<text id="final-score-info" x="225" y="260" text-anchor="middle" font-size="24" fill="white">Final Score: 0</text>
+		</g>
+
+
+
+		<symbol id="toast" xmlns="http://www.w3.org/2000/svg" width="95" height="57" viewBox="0 0 95 57">
+			<!-- Bird body (front view) -->
+			<ellipse cx="47.5" cy="32" rx="12" ry="16" fill="#4169E1" stroke="#191970" stroke-width="1"/>
+			
+			<!-- Bird head (front view) -->
+			<ellipse cx="47.5" cy="18" rx="8" ry="9" fill="#4169E1" stroke="#191970" stroke-width="1"/>
+			
+			<!-- Bird beak (front view) -->
+			<path d="M47.5 25 L45 28 L50 28 Z" fill="#FFD700" stroke="#FF8C00" stroke-width="1"/>
+			
+			<!-- Left wing (spread out) -->
+			<path class="toast__wings" d="M35 25 Q25 20 15 22 Q10 25 8 30 Q10 35 15 38 Q25 40 35 35 Q38 30 35 25 Z" 
+				  fill="#87CEEB" stroke="#2F4F4F" stroke-width="1.5"/>
+			
+			<!-- Right wing (spread out) -->
+			<path class="toast__wings" d="M60 25 Q70 20 80 22 Q85 25 87 30 Q85 35 80 38 Q70 40 60 35 Q57 30 60 25 Z" 
+				  fill="#87CEEB" stroke="#2F4F4F" stroke-width="1.5"/>
+			
+			<!-- Wing feather details -->
+			<path d="M15 25 Q20 23 25 25 Q30 27 33 30" fill="none" stroke="#4682B4" stroke-width="1"/>
+			<path d="M15 30 Q20 28 25 30 Q30 32 33 35" fill="none" stroke="#4682B4" stroke-width="1"/>
+			<path d="M80 25 Q75 23 70 25 Q65 27 62 30" fill="none" stroke="#4682B4" stroke-width="1"/>
+			<path d="M80 30 Q75 28 70 30 Q65 32 62 35" fill="none" stroke="#4682B4" stroke-width="1"/>
+			
+			<!-- Primary flight feathers -->
+			<path d="M8 28 L3 25 L4 32 Z" fill="#2F4F4F"/>
+			<path d="M6 32 L1 29 L2 36 Z" fill="#2F4F4F"/>
+			<path d="M87 28 L92 25 L91 32 Z" fill="#2F4F4F"/>
+			<path d="M89 32 L94 29 L93 36 Z" fill="#2F4F4F"/>
+			
+			<!-- Both eyes (front view) -->
+			<g class="toast__eyes">
+				<circle cx="43" cy="16" r="4.5" fill="#000"/>
+				<circle cx="52" cy="16" r="4.5" fill="#000"/>
+				<circle cx="43.5" cy="15.2" r="1.5" fill="#FFF"/>
+				<circle cx="52.5" cy="15.2" r="1.5" fill="#FFF"/>
+			</g>
+			
+			<!-- Chest/belly (front view) -->
+			<ellipse cx="47.5" cy="34" rx="8" ry="12" fill="#87CEEB" stroke="#4682B4" stroke-width="0.5"/>
+			
+			<!-- Bird legs (front view) -->
+			<line x1="43" y1="48" x2="41" y2="54" stroke="#FF8C00" stroke-width="2"/>
+			<line x1="52" y1="48" x2="54" y2="54" stroke="#FF8C00" stroke-width="2"/>
+			
+			<!-- Bird feet (front view) -->
+			<path d="M39 54 L36 56 M41 54 L38 56 M43 54 L40 56" stroke="#FF8C00" stroke-width="1.5" fill="none"/>
+			<path d="M52 54 L49 56 M54 54 L51 56 M56 54 L53 56" stroke="#FF8C00" stroke-width="1.5" fill="none"/>
+			
+			<!-- Head crest (front view) -->
+			<path d="M47.5 9 Q44 7 42 9 Q44 11 47.5 9 Q51 7 53 9 Q51 11 47.5 9" fill="#191970"/>
+			
+			<!-- Tail feathers (visible from behind) -->
+			<path d="M47.5 48 Q42 52 38 54 Q42 56 47.5 52 Q53 56 57 54 Q53 52 47.5 48" fill="#4169E1" stroke="#191970" stroke-width="1"/>
+			<path d="M47.5 50 Q44 53 41 55 Q44 56 47.5 53 Q51 56 54 55 Q51 53 47.5 50" fill="#87CEEB" stroke="#2F4F4F" stroke-width="1"/>
+			
+			<!-- Wing shoulder connection -->
+			<ellipse cx="35" cy="28" rx="3" ry="4" fill="#4169E1"/>
+			<ellipse cx="60" cy="28" rx="3" ry="4" fill="#4169E1"/>
+		</symbol>
+
+	</svg>
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
